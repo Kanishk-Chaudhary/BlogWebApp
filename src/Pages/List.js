@@ -136,7 +136,7 @@ onValue(starCountRef, (snapshot) => {
         <div>
          {
                 favoritesCtx.favorites.reverse().map(blog => { 
-                    return <Blog url = {blog.image} title = {blog.title} description = {blog.description} body = {blog.body} by = {blog.by} id = {blog.id}></Blog>
+                    return <Blog image = {blog.image} title = {blog.title} description = {blog.description} body = {blog.body} by = {blog.by} id = {blog.id}></Blog>
                  })
                  
                  }

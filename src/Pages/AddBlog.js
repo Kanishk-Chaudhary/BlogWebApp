@@ -62,13 +62,7 @@ onValue(starCountRef, (snapshot) => {
 });
 
 
-            set(ref(firebaseDatabase, 'users/' + auth.currentUser.uid), {
-               name: user.name,
-               uid: user.uid,
-               Favorites: user.Favorites,
-               blogsPublished: user.blogsPublished +1,
-               email: user.email
-              });
+set(ref(firebaseDatabase,"users/" + auth.currentUser.uid+"/blogsPublished"),user.blogsPublished+1)
 
         }
         
