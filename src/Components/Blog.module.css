@@ -1,0 +1,72 @@
+.blog{
+    position:relative;
+background-color: white;
+  width: 50vw;
+  border: 5px solid rebeccapurple;
+ 
+  padding: 10px;
+
+  height:auto;
+  border-radius: 10px;
+  
+  margin: auto;
+  margin-bottom: 10px;
+  width: 90%;
+ 
+
+
+
+
+}
+
+.blog img{
+
+    width: auto;
+    
+    border-radius: 2vw;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
+.display
+{
+    max-width: 100vw;
+    
+    
+}
+
+h1{
+
+    text-align: center;
+    font-family: cursive;
+    font-weight: bolder;
+    font-size: 4vw;
+}
+
+.buttonDiv {
+
+ 
+  bottom:0px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+  
+      
+}
+
+button{
+ 
+padding: 10px;
+border-radius: 5px;
+margin-left: 5px;
+font: inherit;
+cursor: pointer;
+background-color: #09add1;
+color: white;
+padding: 0.5rem 1.5rem;
+border: 1px solid #09add1;
+border-radius: 4px;
+font-weight: bold;
+border-color: black;
+}
