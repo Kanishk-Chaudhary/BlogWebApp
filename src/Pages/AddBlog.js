@@ -62,35 +62,37 @@ onValue(starCountRef, (snapshot) => {
 });
 
 
-set(ref(firebaseDatabase,"users/" + auth.currentUser.uid+"/blogsPublished"),user.blogsPublished+1)
+set(ref(firebaseDatabase,"users/" + auth.currentUser.uid+"/blogsPublished"),user.blogsPublished+1);
 
+fetch(
+    "https://react-blog-3c025-default-rtdb.firebaseio.com/posts.json" , 
+    {
+        method: 'POST' , 
+        body : JSON.stringify({image: imageValue , title : titleValue , description: descriptionValue ,body:bodyValue,by:user.name}),
+        headers:{
+            'Content-Type' : 'application/json'
         }
-        
+    }
+    
+    ).then(() => {
+        history("/");
+    })
 
-    fetch(
-        "https://react-blog-3c025-default-rtdb.firebaseio.com/posts.json" , 
-        {
-            method: 'POST' , 
-            body : JSON.stringify({image: imageValue , title : titleValue , description: descriptionValue ,body:bodyValue,by:user.name}),
-            headers:{
-                'Content-Type' : 'application/json'
-            }
-        }
-        
-        ).then(() => {
-            history("/");
-        })
+    
+.catch((error) => {
+const errorCode = error.code;
+const errorMessage = error.message;
 
-        
- .catch((error) => {
-    const errorCode = error.code;
-    const errorMessage = error.message;
+alert(errorMessage);
 
-    alert(errorMessage);
-
-    // ..
-  })
+// ..
+})
 }
+
+        }
+        
+
+    
 
     return (
         <div>
